@@ -1,0 +1,49 @@
+@import url("theme.css");
+
+body {
+    background: rgb(31,56,172);
+    background: linear-gradient(90deg, rgba(31,56,172,1) 0%, rgba(0,147,244,1) 50%, rgba(31,56,172,1) 100%);
+}
+
+.display-row-center{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-column-center{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ------------------------------------ */
+
+.layout1NavA {
+    border:2px solid white;
+    margin-left: 10px;
+    padding:5px;
+}
+
+.btn-register-login{
+    color: white;
+    border: 0 none;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 1vh;
+    box-shadow: 0 0 0 2px var(--light-blue), 0 0 0 3px var(--dark-blue);
+}
+
+.btn-register-login:hover {
+    font-size: 3.1vw;
+    color:var(--dark-blue);
+    background-color:white!important;
+}
