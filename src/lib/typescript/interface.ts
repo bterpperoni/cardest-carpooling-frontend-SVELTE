@@ -9,5 +9,5 @@ export type User = {
     firstName: string,
     familyName: string,
     email: string,
-    password: string
+    password: string,
 }
