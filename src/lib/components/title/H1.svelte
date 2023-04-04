@@ -10,7 +10,7 @@
     h1{
         text-align: center;
         color: white;
-        font-size: 7vw;
+        font-size: 3rem;
         font-weight: bold;
     }
 </style>

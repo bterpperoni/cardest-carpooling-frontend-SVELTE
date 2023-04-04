@@ -1,9 +1,14 @@
 <script lang='ts'>
-    import Button from "./Button.svelte";
     import { signIn } from 'svelte-google-auth/client';
+
+    async function signInHandle() {
+      await signIn();
+      window.location.href = '/index';
+    } 
+    
 </script>
 
-<button class="login-with-google-btn" on:click={() => signIn()}>Sign in with Google</button>
+<button class="login-with-google-btn" on:click={() => signInHandle()}>Sign in with Google</button>
 
 <style>
 .login-with-google-btn {

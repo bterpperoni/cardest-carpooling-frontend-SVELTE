@@ -1,14 +1,10 @@
-<nav class="nav-main">
+<nav class="nav-main display-row-space-between">
     <slot/>
 </nav>
 
 <style>
     .nav-main {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #333;
+        background-color: var(--deep-blue);
         color: white;
         padding: 10px;
     }

@@ -19,6 +19,13 @@ body {
     justify-content: center;
 }
 
+.display-row-space-between{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 *,
 *::before,
 *::after {
@@ -27,10 +34,20 @@ body {
 
 /* ------------------------------------ */
 
+.div-main-page {
+    height: 75vh;
+}
+
 .layout1NavA {
     border:2px solid white;
     margin-left: 10px;
     padding:5px;
+    border-radius: 15%;
+}
+
+.layout1NavA:hover {
+    background-color: white;
+    color: var(--deep-blue);
 }
 
 .btn-register-login{
