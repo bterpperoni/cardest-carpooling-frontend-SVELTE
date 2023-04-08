@@ -28,7 +28,7 @@
     <A customClass="layout1NavA" text="About"></A>
     <div class="display-row-center">
         <!-- svelte-ignore a11y-img-redundant-alt -->
-        <img style="width:50px; height:50px" src={data.auth.user?.picture} alt="Profil picture">
+        <img style="width:40px; height:40px" src={data.auth.user?.picture} alt="Profil picture">
         <A customClass="layout1NavA" text="Logout" doIt={() => signOutHandle()}></A>
     </div>
     

@@ -6,3 +6,4 @@
 </script>
 
 <H2 text="Welcome {data.auth.user?.name}"></H2>
+

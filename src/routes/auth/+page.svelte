@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { PageData } from './$types';
     import { invalidateAll } from '$app/navigation';
-    import { initialize } from 'svelte-google-auth/client';
+    import { initialize, signIn } from 'svelte-google-auth/client';
     import Google from '$lib/components/button/Google.svelte';
     import H1 from '$lib/components/title/H1.svelte';
     import { onMount } from 'svelte';
@@ -10,12 +10,17 @@
     initialize(data, invalidateAll);
     
     onMount(() => {
-        console.log('onMount');
-        console.log(data);
         if(data.auth.access_token){
             window.location.href = '/index';
         }
     });
+
+    const signInHandle = async () => {
+        await signIn();
+        if(data.auth.access_token){
+            window.location.href = `/auth/${data.auth.access_token}`;
+        }
+    }
     </script>
     
     <div class="display-column-center div-main-page">
@@ -23,5 +28,5 @@
         <figure>
             <img src="" alt="carpooling" class="img-carpooling"/>
         </figure>   
-        <Google/>
+        <Google doIt={() => signInHandle()}/>
     </div>
