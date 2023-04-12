@@ -7,4 +7,4 @@
     export let bg: string = 'dark-blue';
 </script>
 
-<button {type} class="{customClass} mt-4" style="font-size: {fontSize}vw; background-color: var(--{bg})" on:click={doIt}>{text} <slot/></button>
+<button {type} class="{customClass} mt-2" style="font-size: {fontSize}vw; background-color: var(--{bg})" on:click={doIt}>{text} <slot/></button>

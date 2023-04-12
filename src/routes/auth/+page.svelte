@@ -1,13 +1,11 @@
 <script lang="ts">
     import type { PageData } from './$types';
-    import { invalidateAll } from '$app/navigation';
-    import { initialize, signIn } from 'svelte-google-auth/client';
+    import { signIn } from 'svelte-google-auth/client';
     import Google from '$lib/components/button/Google.svelte';
     import H1 from '$lib/components/title/H1.svelte';
     import { onMount } from 'svelte';
     
     export let data: PageData;	
-    initialize(data, invalidateAll);
     
     onMount(() => {
         if(data.auth.access_token){
@@ -18,7 +16,7 @@
     const signInHandle = async () => {
         await signIn();
         if(data.auth.access_token){
-            window.location.href = `/auth/${data.auth.access_token}`;
+            window.location.href = `/auth/${data.auth.user?.email}`;
         }
     }
     </script>

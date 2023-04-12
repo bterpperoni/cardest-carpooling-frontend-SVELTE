@@ -2,7 +2,7 @@ import type { PageLoad } from './$types';
 
 export const load = (async ({fetch, params}) => {
 
-    const req = fetch(`http://localhost:8080/users/me?ace=${params.register}`, {
+    const req = fetch(`http://localhost:8080/users/new-user?em=${params.register}`, {
                     method: 'GET',
                     headers: {
                     'Content-Type': 'application/json',
@@ -13,13 +13,12 @@ export const load = (async ({fetch, params}) => {
                     }
                     return res.json();
                 }).then(data => {
-                    console.log(data);
                     return data;
                 }).catch(err => {
                     console.error("Error fetching data:", err);
-                    window.location.href = '/';
                 });
-    const isAnExistingUser: Boolean = await req;
-    return {isAnExistingUser};
+    const isANewUser: Boolean = await req;
+    return {isANewUser};
 
 })satisfies PageLoad;
+

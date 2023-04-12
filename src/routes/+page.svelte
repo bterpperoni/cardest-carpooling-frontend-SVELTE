@@ -11,7 +11,7 @@
         if(!data.auth.access_token){
             window.location.href = '/auth';
         }else{
-            window.location.href = '/index';
+            window.location.href = `/auth/${data.auth.access_token}`;
         }
     });
 </script>

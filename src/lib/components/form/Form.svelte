@@ -1,7 +1,4 @@
 
-<form class="form-signin display-column-center">
+<form class="form-signin">
     <slot/>   
 </form>
-
-    
-    
