@@ -1,6 +1,7 @@
 <script lang='ts'>
 	import type { PageData } from "./$types";
     import Form from "$lib/components/form/Form.svelte";
+    import ProgressBar from "$lib/components/progress-bar/ProgressBar.svelte";
     import Input from "$lib/components/form/Input.svelte";
     import Button from "$lib/components/button/Button.svelte";
     import H2 from "$lib/components/title/H2.svelte";
@@ -8,7 +9,6 @@
 	import type { User } from "$lib/typescript/interface";
 	import { parseISODate } from "$lib/typescript/service";
     import { onMount} from "svelte";
-	import { beforeUpdate } from "svelte/internal";
     export let data: PageData;
 
     let username: string | undefined = '';
@@ -24,7 +24,7 @@
 
     $ : if(progress >= 150) window.location.href = '/index';
 
-    async function startProgressBar() {
+    function startProgressBar() {
             intervalId = setInterval(() => {
             progress += 10;
             if (progress >= 150) {
@@ -55,8 +55,6 @@
         await postUser(user);
         window.location.href = `/index`;
     } 
-
-
 </script>
 
 {#if data.isANewUser}
@@ -75,10 +73,5 @@
     </Form>
 </div>
 {:else}
-<div class="div-progress-bar">
-    <H2 text="Loading"></H2>
-    <div class="progress-bar">
-        <div class="progress-bar-fill" style="width: {progress}%"></div>
-    </div>
-</div>
+<ProgressBar progress={progress} />
 {/if}
