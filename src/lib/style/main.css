@@ -63,7 +63,8 @@ body {
 .layout1FooterA:hover {
     background-color: white;
     color: var(--deep-blue);
-    box-shadow: var(--deep-blue) 2px 2px 2px 2px white;
+    box-shadow: 0 0 0 2px var(--light-blue), 0 0 0 2px white;
+    overflow: hidden;
 }
 
 .btn-register-login{

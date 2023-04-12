@@ -5,13 +5,13 @@
     import Footer from "$lib/components/footer/Footer.svelte";
 	import { signOut } from "svelte-google-auth/client";
 	import { onMount } from "svelte";
-    import type { PageData } from './$types';
     import { invalidateAll } from '$app/navigation';
     import { initialize } from 'svelte-google-auth/client';
-	
-    export let data: PageData;	
-    initialize(data, invalidateAll);
+	import type { PageData } from "../$types";
 
+	
+    export let data: PageData;
+    initialize(data, invalidateAll);
     onMount(() => {
         console.log('User\'s data');
         console.log(data);
@@ -19,7 +19,6 @@
             window.location.href = '/auth';
         }
     });
-
     async function signOutHandle() {
         await signOut();
         window.location.href = '/auth';

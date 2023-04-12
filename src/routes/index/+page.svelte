@@ -1,1 +1,3 @@
-c vide
+<script lang='ts'>
+
+</script>

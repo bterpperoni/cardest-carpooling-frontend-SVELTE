@@ -11,3 +11,10 @@ export type User = {
     zip: string,
     isNew: boolean
 }
+
+export type Destination = {
+    id: null | number,
+    name: string,
+    address: string,
+    coordinates: string
+}
