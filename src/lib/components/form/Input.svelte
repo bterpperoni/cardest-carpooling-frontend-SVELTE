@@ -3,22 +3,12 @@
     export let name: string = '';
     export let label: string = '';
     export let id: string = '';
-    export let type: string = 'text';
-    export let bindValue: string | undefined = '';
-    export let value: string | undefined;
-
-  $: bindValue = value;
-
-  function handleChange(event: InputEvent) {
-      const target = event.target as HTMLInputElement;
-      bindValue = target.value;
-  }
-
- </script>
+    export let bindValue: string | undefined;
+</script>
 
  <div class="div-input">
   <label for={id}>{label}</label>
-  <input class="input form-control" {id} {placeholder} {name} value={bindValue} {type} on:input={() => handleChange}/>
+  <input class="input form-control" {id} {placeholder} {name} bind:value={bindValue}/>
 </div>
 
 <style>
