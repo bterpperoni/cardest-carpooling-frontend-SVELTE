@@ -66,7 +66,7 @@
         <Input id="username"  label="Username : " placeholder={data.auth.user?.name} bind:bindValue={username} />
         <Input id="firstName" label="First Name : "  placeholder="First Name" bind:bindValue={firstName}/>
         <Input id="familyName" label="Last Name : "  placeholder="Family Name" bind:bindValue={familyName}/>
-        <Input id="email" label="Email :" placeholder="Email" bind:bindValue={email} />
+        <Input id="email" label="Email :" placeholder="Email" bind:bindValue={email} disabled />
         <Input id="birthDate" label="Birth Date : "  bind:bindValue={birthDate}/>
         <Input id="address"  label="Address : " placeholder="Adress" bind:bindValue={address}/>
         <Input id="locality"  label="Locality : " placeholder="Locality" bind:bindValue={locality}/>

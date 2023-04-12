@@ -4,11 +4,12 @@
     export let label: string = '';
     export let id: string = '';
     export let bindValue: string | undefined;
+    export let disabled: boolean = false;
 </script>
 
  <div class="div-input">
   <label for={id}>{label}</label>
-  <input class="input form-control" {id} {placeholder} {name} bind:value={bindValue}/>
+  <input class="input form-control" {id} {placeholder} {name} bind:value={bindValue} {disabled}/>
 </div>
 
 <style>
