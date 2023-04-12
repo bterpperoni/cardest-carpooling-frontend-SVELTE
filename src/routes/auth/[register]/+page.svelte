@@ -22,7 +22,7 @@
     let progress = 0;
     let intervalId: NodeJS.Timeout ;
 
-    $ : if(progress >= 100) window.location.href = '/index';
+    $ : if(progress >= 150) window.location.href = '/index';
 
     async function startProgressBar() {
             intervalId = setInterval(() => {
@@ -30,7 +30,7 @@
             if (progress >= 150) {
                 clearInterval(intervalId);
             }
-        }, 150);
+        }, 100);
         }
 
     onMount(() => {
@@ -74,14 +74,9 @@
         <Button customClass="btn-register-login" type="submit" text="Submit" doIt={() => register()}></Button>
     </Form>
 </div>
-<h1>{locality}</h1>
-<div class="div-progress-bar">
-    <div class="progress-bar">
-        <div class="progress-bar-fill" style="width: {progress}%"></div>
-    </div>
-</div>
 {:else}
 <div class="div-progress-bar">
+    <H2 text="Loading"></H2>
     <div class="progress-bar">
         <div class="progress-bar-fill" style="width: {progress}%"></div>
     </div>
