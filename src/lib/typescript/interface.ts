@@ -8,5 +8,6 @@ export type User = {
     birthDate: Date | undefined | number,
     address: string,
     locality: string,
-    zip: string
+    zip: string,
+    isNew: boolean
 }
