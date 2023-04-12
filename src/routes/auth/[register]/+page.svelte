@@ -1,7 +1,7 @@
 <script lang='ts'>
 	import type { PageData } from "./$types";
     import Form from "$lib/components/form/Form.svelte";
-    import ProgressBar from "$lib/components/progress-bar/ProgressBar.svelte";
+    import ProgressBar from "$lib/components/bar/ProgressBar.svelte";
     import Input from "$lib/components/form/Input.svelte";
     import Button from "$lib/components/button/Button.svelte";
     import H2 from "$lib/components/title/H2.svelte";
@@ -11,7 +11,7 @@
     import { onMount} from "svelte";
     export let data: PageData;
 
-    let username: string | undefined = '';
+    let username: string | undefined = data.auth.user?.name;
     let firstName: string | undefined = data.auth.user?.given_name;
     let familyName: string | undefined = data.auth.user?.family_name;
     let email: string | undefined = data.auth.user?.email;
@@ -19,10 +19,11 @@
     let address: string = "";
     let locality: string= "";
     let zip: string = '';
+    
     let progress = 0;
     let intervalId: NodeJS.Timeout ;
 
-    $ : if(progress >= 150) window.location.href = '/index';
+    $ : if(progress >= 150) window.location.href = `/index/${data.auth.user?.email}`;
 
     function startProgressBar() {
             intervalId = setInterval(() => {
@@ -51,9 +52,10 @@
             address : address,
             locality: locality,
             zip: zip,
+            isNew : true
         };
         await postUser(user);
-        window.location.href = `/index`;
+        window.location.href = `/index/${data.auth.user?.email}`;
     } 
 </script>
 

@@ -9,7 +9,7 @@
     
     onMount(() => {
         if(data.auth.access_token){
-            window.location.href = '/index';
+            window.location.href = `/index/${data.auth.user?.email}`;
         }
     });
 
