@@ -1,4 +1,4 @@
-import type { User } from "$lib/typescript/interface";
+import type { User } from "$lib/scripts/interface";
 import type { PageLoad } from "./$types";
 
 export const load = (async ({fetch, params}) => {

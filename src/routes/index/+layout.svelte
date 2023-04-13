@@ -38,7 +38,7 @@
     
     <Footer>
         <div class="div-footer">
-            <A customClass="layout1FooterA" text="Passenger"></A>
+            <A customClass="layout1FooterA" text="Passenger" ref="/index/passenger"></A>
         </div>
         <div class="div-footer">
             <A customClass="layout1FooterA" text="Driver"></A>

@@ -3,9 +3,9 @@
     import H2 from '$lib/components/title/H2.svelte';
     import Button from '$lib/components/button/Button.svelte';
     import Dropdown from '$lib/components/dropdown/Dropdown.svelte';
-	import type { Destination } from '$lib/typescript/interface';
+	import type { Destination } from '$lib/scripts/interface';
     import { onMount } from 'svelte';
-	import { getDestinations } from '$lib/typescript/httpRequest';
+	import { getDestinations } from '$lib/scripts/httpRequest';
     export let data: PageData;
     let selected: string = '';
     let destinations: Array<Destination> = [];

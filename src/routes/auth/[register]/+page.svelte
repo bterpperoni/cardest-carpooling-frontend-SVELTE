@@ -5,9 +5,9 @@
     import Input from "$lib/components/form/Input.svelte";
     import Button from "$lib/components/button/Button.svelte";
     import H2 from "$lib/components/title/H2.svelte";
-	import { postUser } from "$lib/typescript/httpRequest";
-	import type { User } from "$lib/typescript/interface";
-	import { parseISODate } from "$lib/typescript/service";
+	import { postUser } from "$lib/scripts/httpRequest";
+	import type { User } from "$lib/scripts/interface";
+	import { parseISODate } from "$lib/scripts/service";
     import { onMount} from "svelte";
     export let data: PageData;
 

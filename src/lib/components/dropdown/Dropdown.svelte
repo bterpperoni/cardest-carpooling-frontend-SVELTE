@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import type { Destination } from "$lib/typescript/interface";
+	import type { Destination } from "$lib/scripts/interface";
 
     export let options: Array<Destination> = [];
     export let label: string = '';
