@@ -26,7 +26,7 @@
 </script>
 <div class="layout-index">
     <Nav>
-        <A customClass="layout1NavA" text="About"></A>
+        <A customClass="layout1NavA" text="Home" ref="/index/{data.auth.user?.email}"></A>
         <div class="display-row-center">
             <!-- svelte-ignore a11y-img-redundant-alt -->
             <img style="width:40px; height:40px" src={data.auth.user?.picture} alt="Profil picture">

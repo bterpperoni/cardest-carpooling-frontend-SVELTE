@@ -15,3 +15,10 @@
       </select>
   </div>
 
+<style>
+    label{
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+</style>

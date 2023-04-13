@@ -29,7 +29,7 @@
 
   .div-progress-bar {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     border-radius: 10px;
     overflow: hidden;
     display: flex;

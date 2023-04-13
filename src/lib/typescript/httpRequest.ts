@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { User } from "./interface";
+import type { Destination, User } from "./interface";
 
 export const postUser = async (user: User) => {
     await axios.post(`http://localhost:8080/users`, user, {
@@ -17,4 +17,10 @@ export const postUser = async (user: User) => {
         .catch(err => {
             console.error("Error fetching data:", err);
         });
+}
+
+export async function getDestinations(): Promise<Destination[]>{
+    const response = await fetch('http://localhost:8080/destinations');
+    const data = await response.json();
+    return data;
 }
