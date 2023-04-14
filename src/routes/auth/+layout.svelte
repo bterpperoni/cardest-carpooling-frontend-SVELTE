@@ -1,8 +1,8 @@
 <script lang='ts'>
     import "$lib/style/main.css";
     import LayoutTemplate from "$lib/components/layout/LayoutTemplate.svelte";
-	import { initialize, signOut } from "svelte-google-auth/client";
-	import { invalidateAll } from "$app/navigation";
+    import { initialize, signOut } from "svelte-google-auth/client";
+    import { invalidateAll } from "$app/navigation";
     import type { PageData } from "./$types";
 	import A from "$lib/components/button/A.svelte";
 
