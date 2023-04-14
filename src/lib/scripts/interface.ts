@@ -9,12 +9,15 @@ export type User = {
     address: string,
     locality: string,
     zip: string,
-    isNew: boolean
+    isNew: boolean | null
 }
 
 export type Destination = {
     id: null | number,
     name: string,
     address: string,
-    coordinates: string
+    locality: string,
+    zip: string,
+    latitude: number,
+    longitude: number
 }

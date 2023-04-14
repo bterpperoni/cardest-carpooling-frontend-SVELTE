@@ -43,7 +43,7 @@
 
     async function register(): Promise<void> {
         const user: User = {
-            id : 0,
+            id : null,
             username: username,
             firstName: firstName,
             familyName: familyName,

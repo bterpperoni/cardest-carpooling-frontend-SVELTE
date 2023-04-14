@@ -3,7 +3,7 @@
 
     export let options: Array<Destination> = [];
     export let label: string = '';
-    export let selected: string = '';
+    export let selected: number | null;
 </script>
 
 <div class="div-select display-column-center"> 

@@ -28,6 +28,10 @@ body {
     justify-content: space-between;
 }  
 
+.marker-label {
+    background-color: black;
+  }
+
 /* ------------------------------------ */
 
 .div-main-page {
