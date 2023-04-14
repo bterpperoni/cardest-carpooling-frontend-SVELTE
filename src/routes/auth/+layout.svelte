@@ -4,7 +4,7 @@
     import { initialize, signOut } from "svelte-google-auth/client";
     import { invalidateAll } from "$app/navigation";
     import type { PageData } from "./$types";
-	import A from "$lib/components/button/A.svelte";
+    import A from "$lib/components/button/A.svelte";
 
     async function goHomeWithoutSignup(){
         await signOut();   
