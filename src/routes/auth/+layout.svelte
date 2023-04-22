@@ -2,13 +2,13 @@
     import "$lib/style/main.css";
     import LayoutTemplate from "$lib/components/layout/LayoutTemplate.svelte";
 	import { initialize, signOut } from "svelte-google-auth/client";
-	import { invalidateAll } from "$app/navigation";
+	import { goto, invalidateAll } from "$app/navigation";
     import type { PageData } from "./$types";
-	import A from "$lib/components/button/A.svelte";
+	import Button from "$lib/components/button/Button.svelte";
 
     async function goHomeWithoutSignup(){
         await signOut();   
-        window.location.href = '/';
+        goto('/');
     }
     export let data: PageData;	
     initialize(data, invalidateAll);
@@ -16,7 +16,7 @@
 
 <LayoutTemplate>
     <div slot="nav">
-        <A customClass="layout1NavA" text="Home" doIt={() => goHomeWithoutSignup()}></A>  
+        <Button class="layout1NavA" doIt={() => goHomeWithoutSignup()}>Home</Button>  
     </div>
     <slot/>
 </LayoutTemplate>

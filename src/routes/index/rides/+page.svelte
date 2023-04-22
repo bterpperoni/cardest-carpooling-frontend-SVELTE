@@ -7,10 +7,9 @@
 
     export let data: PageData;
 
-    let selected: number | null;
+    let selected: number;
 
     $ : console.log(selected);
-    
 
     onMount(() => {
       const loader = new Loader({

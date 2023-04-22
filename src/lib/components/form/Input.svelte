@@ -5,6 +5,11 @@
     export let id: string = '';
     export let bindValue: string | undefined;
     export let disabled: boolean = false;
+    export let type: string = 'text';
+
+    function typeAction(node: HTMLInputElement) {
+        node.type = type;
+    }
 </script>
 
  <div class="div-input">

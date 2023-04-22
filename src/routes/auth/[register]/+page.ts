@@ -2,7 +2,7 @@ import type { PageLoad } from './$types';
 
 export const load = (async ({fetch, params}) => {
 
-    const req = fetch(`http://localhost:8080/users/new-user?em=${params.register}`, {
+    const req = fetch(`http://localhost:8080/users/new-user?email=${params.register}`, {
                     method: 'GET',
                     headers: {
                     'Content-Type': 'application/json',

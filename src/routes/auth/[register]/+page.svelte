@@ -6,9 +6,10 @@
     import Button from "$lib/components/button/Button.svelte";
     import H2 from "$lib/components/title/H2.svelte";
 	import { postUser } from "$lib/scripts/httpRequest";
-	import type { User } from "$lib/scripts/interface";
+
 	import { parseISODate } from "$lib/scripts/service";
     import { onMount} from "svelte";
+	import type { User } from "$lib/scripts/interface";
     export let data: PageData;
 
     let username: string | undefined = data.auth.user?.name;
@@ -71,7 +72,7 @@
         <Input id="address"  label="Address : " placeholder="Adress" bind:bindValue={address}/>
         <Input id="locality"  label="Locality : " placeholder="Locality" bind:bindValue={locality}/>
         <Input id="zip"  label="Zip : " placeholder="Zip" bind:bindValue={zip}/>
-        <Button customClass="btn-register-login" type="submit" text="Submit" doIt={() => register()}></Button>
+        <Button class="btn-register-login" type="button" doIt={() => register()}>Submit</Button>
     </Form>
 </div>
 {:else}

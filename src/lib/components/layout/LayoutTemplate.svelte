@@ -1,5 +1,4 @@
 <script lang='ts'>
-	import { update_slot} from "svelte/internal";
     import Footer from "../footer/Footer.svelte";
     import Nav from "../nav/Nav.svelte";
 </script>
@@ -7,17 +6,18 @@
 <div class="layout-index">
     <Nav>
     {#if $$slots.nav }
-            <slot name="nav" />
+        <slot name="nav" />
     {/if}
     </Nav>
     
     <slot/>
     
-    {#if $$slots.footer}
     <Footer>
-        <slot name="footer" update_slot_base />
-    </Footer>
+    {#if $$slots.footer}
+        <slot name="footer" />
     {/if}
+    </Footer>
+    
 </div>
 
 <style>

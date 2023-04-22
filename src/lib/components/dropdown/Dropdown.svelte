@@ -1,9 +1,9 @@
 <script lang='ts'>
-	import type { Destination } from "$lib/scripts/interface";
+	import type { SubDestination } from "$lib/scripts/interface";
 
-    export let options: Array<Destination> = [];
+    export let options: Array<SubDestination> = [];
     export let label: string = '';
-    export let selected: number | null;
+    export let selected: number;
 </script>
 
 <div class="div-select display-column-center"> 

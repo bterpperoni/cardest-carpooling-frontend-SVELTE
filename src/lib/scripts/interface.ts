@@ -1,6 +1,6 @@
 
 export type User = {
-    id: null | number,
+    id: number | null,
     username: string | undefined,
     firstName: string | undefined,
     familyName: string | undefined,
@@ -12,8 +12,8 @@ export type User = {
     isNew: boolean | null
 }
 
-export type Destination = {
-    id: null | number,
+export type SubDestination = {
+    id: number,
     name: string,
     address: string,
     locality: string,
