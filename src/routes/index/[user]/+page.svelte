@@ -4,7 +4,7 @@
     import Button from '$lib/components/button/Button.svelte';
     import Dropdown from '$lib/components/dropdown/Dropdown.svelte';
     export let data: PageData;
-    let selected: number | null = data.DESTINATIONS[0].id;
+    let selected: number = data.DESTINATIONS[0].id;
     $ : console.log(data.actualUser);
     
     
@@ -14,7 +14,7 @@
 <div class="div-index-user display-column-center">
     <H2 text="#{data.actualUser.username}"></H2>
     <Dropdown label="Find drivers to your School" bind:selected options={data.DESTINATIONS}></Dropdown>
-    <Button text="Find it !" customClass="btn-register-login"></Button>
+    <Button class="btn-register-login">Find it !</Button>
 </div>
 
 
