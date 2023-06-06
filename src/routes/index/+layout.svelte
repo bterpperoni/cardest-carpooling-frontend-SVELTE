@@ -1,9 +1,10 @@
 <script lang='ts'>
-    import "$lib/style/main.css";
+    	import "$lib/style/main.css";
 	import { signOut } from "svelte-google-auth/client";
 	import { onMount } from "svelte";
-    import { invalidateAll } from '$app/navigation';
-    import { initialize } from 'svelte-google-auth/client';
+    	import { invalidateAll } from '$app/navigation';
+    	import { initialize } from 'svelte-google-auth/client';
+	import { goto } from '$app/navigation';
 	import type { PageData } from "../$types";
 	import LayoutTemplate from "$lib/components/layout/LayoutTemplate.svelte";
 	import Button from "$lib/components/button/Button.svelte";
@@ -15,12 +16,12 @@
         console.log('User\'s data');
         console.log(data);
         if(!data.auth.access_token){
-            window.location.href = '/auth';
+            goto('/auth');
         }
     });
     async function signOutHandle() {
         await signOut();
-        window.location.href = '/auth';
+        goto('/auth');
     }
 </script>
 
