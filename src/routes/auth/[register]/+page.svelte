@@ -7,9 +7,10 @@
     import H2 from "$lib/components/title/H2.svelte";
 	import { postUser } from "$lib/scripts/httpRequest";
 
-	import { parseISODate } from "$lib/scripts/service";
+	import { parseISODate } from "$lib/scripts/script";
     import { onMount} from "svelte";
 	import type { User } from "$lib/scripts/interface";
+	import { goto } from "$app/navigation";
     export let data: PageData;
 
     let username: string | undefined = data.auth.user?.name;
@@ -24,13 +25,12 @@
     let progress = 0;
     let intervalId: NodeJS.Timeout ;
 
-    $ : if(progress >= 150) window.location.href = `/index/${data.auth.user?.email}`;
-
     function startProgressBar() {
             intervalId = setInterval(() => {
             progress += 10;
             if (progress >= 150) {
                 clearInterval(intervalId);
+                goto(`/index/${data.auth.user?.email}`);
             }
         }, 100);
         }
@@ -41,7 +41,6 @@
         }
     });
     
-
     async function register(): Promise<void> {
         const user: User = {
             id : null,

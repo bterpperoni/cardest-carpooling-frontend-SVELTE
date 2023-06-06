@@ -1,6 +1,6 @@
 <script lang='ts'>
     import type { PageData } from './$types';
-    import { invalidateAll } from '$app/navigation';
+    import { goto, invalidateAll } from '$app/navigation';
     import { initialize } from 'svelte-google-auth/client';
 	import { onMount } from 'svelte';
     
@@ -9,9 +9,9 @@
 
     onMount(() => {
         if(!data.auth.access_token){
-            window.location.href = '/auth';
+            goto('/auth');
         }else{
-            window.location.href = `/auth/${data.auth.user?.email}`;
+            goto(`/auth/${data.auth.user?.email}`);
         }
     });
 </script>

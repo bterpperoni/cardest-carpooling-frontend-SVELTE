@@ -4,19 +4,20 @@
     import Google from '$lib/components/button/Google.svelte';
     import H1 from '$lib/components/title/H1.svelte';
     import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
     
     export let data: PageData;	
     
     onMount(() => {
         if(data.auth.access_token){
-            window.location.href = `/index/${data.auth.user?.email}`;
+            goto(`/index/${data.auth.user?.email}`);
         }
     });
 
     const signInHandle = async () => {
         await signIn();
         if(data.auth.access_token){
-            window.location.href = `/auth/${data.auth.user?.email}`;
+            goto(`/auth/${data.auth.user?.email}`);
         }
     }
     </script>

@@ -12,7 +12,7 @@ export type User = {
     isNew: boolean | null
 }
 
-export type SubDestination = {
+export type Destination = {
     id: number,
     name: string,
     address: string,

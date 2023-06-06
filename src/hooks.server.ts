@@ -1,6 +1,5 @@
 import { SvelteGoogleAuthHook } from 'svelte-google-auth/server';
 import type { Handle } from '@sveltejs/kit';
-import { env } from '$env/dynamic/private';
 
 // Import client credentials from json file
 import client_secret from './client_secret.json';
