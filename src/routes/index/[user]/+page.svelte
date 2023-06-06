@@ -13,7 +13,7 @@
 
 <div class="div-index-user display-column-center">
     <H2 text="#{data.actualUser.username}"></H2>
-    <Dropdown label="Find drivers to your School" bind:selected options={data.DESTINATIONS}></Dropdown>
+    <Dropdown label="There is rivers to your School ? : " bind:selected options={data.DESTINATIONS}></Dropdown>
     <Button class="btn-register-login">Find it !</Button>
 </div>
 

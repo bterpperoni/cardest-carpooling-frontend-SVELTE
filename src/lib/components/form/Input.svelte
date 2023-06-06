@@ -14,7 +14,7 @@
 
  <div class="div-input">
   <label for={id}>{label}</label>
-  <input class="input form-control" {id} {placeholder} {name} bind:value={bindValue} {disabled}/>
+  <input class="input form-control" {id} {placeholder} {name} bind:value={bindValue} {disabled} use:typeAction />
 </div>
 
 <style>

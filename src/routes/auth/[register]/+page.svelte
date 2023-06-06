@@ -55,7 +55,7 @@
             isNew : true
         };
         await postUser(user);
-        window.location.href = `/index/${data.auth.user?.email}`;
+        goto(`/index/${data.auth.user?.email}`);
     } 
 </script>
 
@@ -63,14 +63,14 @@
 <H2 text="Please fill out all the fields below"></H2>
 <div class="div-auth-register">
     <Form>
-        <Input id="username"  label="Username : " placeholder={data.auth.user?.name} bind:bindValue={username} />
-        <Input id="firstName" label="First Name : "  placeholder="First Name" bind:bindValue={firstName}/>
-        <Input id="familyName" label="Last Name : "  placeholder="Family Name" bind:bindValue={familyName}/>
-        <Input id="email" label="Email :" placeholder="Email" bind:bindValue={email} disabled />
-        <Input id="birthDate" label="Birth Date : "  bind:bindValue={birthDate}/>
-        <Input id="address"  label="Address : " placeholder="Adress" bind:bindValue={address}/>
-        <Input id="locality"  label="Locality : " placeholder="Locality" bind:bindValue={locality}/>
-        <Input id="zip"  label="Zip : " placeholder="Zip" bind:bindValue={zip}/>
+        <Input type="text" id="username"  label="Username : " placeholder={data.auth.user?.name} bind:bindValue={username} />
+        <Input type="text" id="firstName" label="First Name : "  placeholder="First Name" bind:bindValue={firstName}/>
+        <Input type="text" id="familyName" label="Last Name : "  placeholder="Family Name" bind:bindValue={familyName}/>
+        <Input type="email" id="email" label="Email :" placeholder="Email" bind:bindValue={email} disabled />
+        <Input type="date" id="birthDate" label="Birth Date : "  bind:bindValue={birthDate}/>
+        <Input type="text" id="address"  label="Address : " placeholder="Adress" bind:bindValue={address}/>
+        <Input type="text" id="locality"  label="Locality : " placeholder="Locality" bind:bindValue={locality}/>
+        <Input type="text" id="zip"  label="Zip : " placeholder="Zip" bind:bindValue={zip}/>
         <Button class="btn-register-login" type="button" doIt={() => register()}>Submit</Button>
     </Form>
 </div>
