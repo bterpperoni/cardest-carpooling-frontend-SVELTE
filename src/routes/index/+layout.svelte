@@ -41,7 +41,7 @@
                 <Button class="layout1FooterA" ref="/index/rides">Passenger</Button>
             </div>
             <div class="div-footer">
-                <Button class="layout1FooterA">Driver</Button>
+                <Button class="layout1FooterA" ref="#">Driver</Button>
             </div>
         </div>
     </LayoutTemplate>        

@@ -1,7 +1,7 @@
 <script lang='ts'>
-	import type { SubDestination } from "$lib/scripts/interface";
+	import type { Destination, Mode } from "$lib/scripts/interface";
 
-    export let options: Array<SubDestination> = [];
+    export let options: Array<Destination> | Array<Mode> = [] ;
     export let label: string = '';
     export let selected: number;
 </script>

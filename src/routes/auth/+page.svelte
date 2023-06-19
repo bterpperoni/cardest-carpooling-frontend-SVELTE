@@ -23,7 +23,7 @@
     </script>
     
     <div class="display-column-center div-main-page">
-        <H1 text="Cardest"></H1>
+        <H1>BlaBlaCardest</H1>
         <figure>
             <img src="" alt="carpooling" class="img-carpooling"/>
         </figure>   

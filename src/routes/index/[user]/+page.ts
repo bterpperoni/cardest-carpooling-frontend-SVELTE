@@ -2,7 +2,8 @@ import type { User } from "$lib/scripts/interface";
 import type { PageLoad } from "./$types";
 
 export const load = (async ({fetch, params}) => {
-    
+
+    // Return the user object
         const req = fetch(`http://localhost:8080/users/user?email=${params.user}`, {
                         method: 'GET',
                         headers: {

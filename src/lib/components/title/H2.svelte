@@ -1,9 +1,8 @@
 <script lang="ts">
-    export let text: string | undefined;
 </script>
 
 <h2>
-    {text}
+    <slot/>
 </h2>
 
 <style>

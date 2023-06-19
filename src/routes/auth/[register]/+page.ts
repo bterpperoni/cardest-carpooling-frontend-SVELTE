@@ -17,7 +17,7 @@ export const load = (async ({fetch, params}) => {
                 }).catch(err => {
                     console.error("Error fetching data:", err);
                 });
-    const isANewUser: Boolean = await req;
+    const isANewUser: boolean = await req;
     return {isANewUser};
 
 })satisfies PageLoad;

@@ -21,3 +21,8 @@ export type Destination = {
     latitude: number,
     longitude: number
 }
+
+export type Mode = {
+    id: number,
+    name: string
+}

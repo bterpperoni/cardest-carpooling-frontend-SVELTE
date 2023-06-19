@@ -5,7 +5,7 @@
     import Input from "$lib/components/form/Input.svelte";
     import Button from "$lib/components/button/Button.svelte";
     import H2 from "$lib/components/title/H2.svelte";
-	import { postUser } from "$lib/scripts/httpRequest";
+	import { postUser } from "$lib/scripts/script";
 
 	import { parseISODate } from "$lib/scripts/script";
     import { onMount} from "svelte";
@@ -60,7 +60,7 @@
 </script>
 
 {#if data.isANewUser}
-<H2 text="Please fill out all the fields below"></H2>
+<H2>Please fill out all the fields below</H2>
 <div class="div-auth-register">
     <Form>
         <Input type="text" id="username"  label="Username : " placeholder={data.auth.user?.name} bind:bindValue={username} />

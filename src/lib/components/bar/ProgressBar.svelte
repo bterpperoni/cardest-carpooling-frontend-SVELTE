@@ -4,7 +4,7 @@
 </script>
 
 <div class="div-progress-bar">
-    <H2 text="Loading"></H2>
+    <H2>Connecting..</H2>
     <div class="progress-bar">
         <div class="progress-bar-fill" style="width: {progress}%"></div>
     </div>
