@@ -7,9 +7,9 @@
     export let data: PageData;
 
 
-    let selectedMode : number = data.MODE[0].id; 
+    // let selectedMode : number = data.MODE[0].id; 
     let selected: number = data.DESTINATIONS[0].id;
-    $ : console.log(selected, selectedMode);
+    $ : console.log(selected);
 </script>
 
 <div class="div-index-user">
