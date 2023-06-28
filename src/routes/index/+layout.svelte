@@ -56,3 +56,5 @@
             width: 100%;
         }
     </style>
+
+<!-- /index Layout -->

@@ -50,3 +50,4 @@
     <Dropdown label="Destinations" bind:selected options={data.DESTINATIONS}></Dropdown>
   </div>
 
+  <!-- /index/rides Page -->

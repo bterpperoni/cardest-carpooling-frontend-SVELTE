@@ -1,6 +1,6 @@
 <script lang='ts'>
 	import H2 from "../title/H2.svelte";
-    export let progress: number;
+  export let progress: number;
 </script>
 
 <div class="div-progress-bar">

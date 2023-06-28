@@ -15,13 +15,15 @@
 <div class="div-index-user">
     <!-- Dropdown to select mode -->
     <!-- <Dropdown options={data.MODE} bind:selected={selectedMode}></Dropdown> -->
-    <Button class="btn-register-login">Passenger</Button>
+   
     <H2>#{data.actualUser.username}</H2>
     <br><br>
     <!-- <Dropdown label="There is Drivers to your School ? : " bind:selected options={data.DESTINATIONS}></Dropdown> -->
     <H1>C'est là QUI Y AURA LES INFOS USERS</H1>
     <br>
     <H2>PAS OUBLIER LE MODAL QUI SWITCH ENTRE PASSENGER ET DRIVER</H2>
+    <br><br>
+    <Button class="btn-register-login">Passenger</Button>
 </div>
 
 

@@ -3,7 +3,7 @@
     export let name: string = '';
     export let label: string = '';
     export let id: string = '';
-    export let bindValue: string | undefined;
+    export let value: string | undefined;
     export let disabled: boolean = false;
     export let type: string = 'text';
 
@@ -14,7 +14,7 @@
 
  <div class="div-input">
   <label for={id}>{label}</label>
-  <input class="input form-control" {id} {placeholder} {name} bind:value={bindValue} {disabled} use:typeAction />
+  <input class="input form-control" {id} {placeholder} {name} bind:value={value} {disabled} use:typeAction />
 </div>
 
 <style>

@@ -1,2 +1,4 @@
 
 <slot/>
+
+<!-- /index/rides Layout -->

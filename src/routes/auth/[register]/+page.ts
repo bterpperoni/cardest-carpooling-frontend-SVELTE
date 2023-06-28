@@ -22,3 +22,4 @@ export const load = (async ({fetch, params}) => {
 
 })satisfies PageLoad;
 
+// <!-- /auth/[register] Ts -->

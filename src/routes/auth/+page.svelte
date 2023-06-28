@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { PageData } from './$types';
     import { signIn } from 'svelte-google-auth/client';
-    import Google from '$lib/components/button/Google.svelte';
+    import Google from '$lib/components/button/GoogleLogin.svelte';
     import H1 from '$lib/components/title/H1.svelte';
     import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
@@ -29,3 +29,5 @@
         </figure>   
         <Google doIt={() => signInHandle()}/>
     </div>
+
+    <!-- /auth Page -->

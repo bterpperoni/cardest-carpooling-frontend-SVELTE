@@ -63,17 +63,19 @@
 <H2>Please fill out all the fields below</H2>
 <div class="div-auth-register">
     <Form>
-        <Input type="text" id="username"  label="Username : " placeholder={data.auth.user?.name} bind:bindValue={username} />
-        <Input type="text" id="firstName" label="First Name : "  placeholder="First Name" bind:bindValue={firstName}/>
-        <Input type="text" id="familyName" label="Last Name : "  placeholder="Family Name" bind:bindValue={familyName}/>
-        <Input type="email" id="email" label="Email :" placeholder="Email" bind:bindValue={email} disabled />
-        <Input type="date" id="birthDate" label="Birth Date : "  bind:bindValue={birthDate}/>
-        <Input type="text" id="address"  label="Address : " placeholder="Adress" bind:bindValue={address}/>
-        <Input type="text" id="locality"  label="Locality : " placeholder="Locality" bind:bindValue={locality}/>
-        <Input type="text" id="zip"  label="Zip : " placeholder="Zip" bind:bindValue={zip}/>
+        <Input type="text" id="username"  label="Username : " placeholder={data.auth.user?.name} bind:value={username} />
+        <Input type="text" id="firstName" label="First Name : "  placeholder="First Name" bind:value={firstName}/>
+        <Input type="text" id="familyName" label="Last Name : "  placeholder="Family Name" bind:value={familyName}/>
+        <Input type="email" id="email" label="Email :" placeholder="Email" bind:value={email} disabled />
+        <Input type="date" id="birthDate" label="Birth Date : "  bind:value={birthDate}/>
+        <Input type="text" id="address"  label="Address : " placeholder="Adress" bind:value={address}/>
+        <Input type="text" id="locality"  label="Locality : " placeholder="Locality" bind:value={locality}/>
+        <Input type="text" id="zip"  label="Zip : " placeholder="Zip" bind:value={zip}/>
         <Button class="btn-register-login" type="button" doIt={() => register()}>Submit</Button>
     </Form>
 </div>
 {:else}
 <ProgressBar progress={progress} />
 {/if}
+
+<!-- /auth/[register] Page -->
